@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-shopping-edit></app-shopping-edit>
+      <hr>
+      <a class="list-group-item"href="" *ngFor="let ing of Ingredients">
+        {{ing.name}}
+        {{ing.noOfItems}}
+      </a>
+
+    </div>
+  </div>
+</div>
