@@ -4,19 +4,25 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-xs-12">
-    Name
+  <div  [style.backgroundColor]="color" *ngIf="data"class="col-xs-12">
+    {{data.name}}
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <div class="btn-group">
+    <div appDropDown  class="btn-group ">
     <button type="button" class="btn btn-primary dropdown-toggle">Manage Recipe</button>
     <ul class="drop">
-      <li><a href="">to shopping list</a></li>
-      <li><a href="">edit recipe</a></li>
-      <li><a href="">delete recipe</a></li>
+      <li><a (click)="toIngredientsList()">to shopping list</a></li>
+
     </ul>
+    <div class="row list-group-item">
+      <div class="col-sm-12">
+        <div>{{data.ingredients.name}}</div>
+        <div>{{data.ingredients.noOfItems}}</div>
+
+      </div>
+    </div>
     </div>
   </div>
 </div>

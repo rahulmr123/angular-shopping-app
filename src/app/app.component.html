@@ -1,14 +1,15 @@
-<app-header></app-header>
+<app-header (navigationRecShop)="selectNav($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2>     <app-recipie>
+      <h2>     <app-recipie
+        *ngIf="selectRecipe">
 
       </app-recipie>
         </h2>
     </div>
     <div class="col-md-5">
-      <app-shopping-list></app-shopping-list>
+      <app-shopping-list *ngIf="!selectRecipe"></app-shopping-list>
     </div>
   </div>
 </div>
